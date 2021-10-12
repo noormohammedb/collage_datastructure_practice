@@ -5,6 +5,7 @@ int queue[2], qLeng = 2, qFront = -1, qRear = -1;
 
 void enQueue()
 {
+  // cout << "\nfront , rear : " << qFront << " " << qRear; // for Debugging
   int item;
   if (qRear < qLeng - 1)
   {
@@ -24,9 +25,8 @@ void enQueue()
 
 void deQueue()
 {
-  // if (qFront > qRear)
-  cout << "\nfront , rear : " << qFront << " " << qRear;
-  if (qFront >= 0 || qRear > qFront)
+  // cout << "\nfront , rear : " << qFront << " " << qRear; // for Debugging
+  if (qFront >= 0 && qRear >= qFront)
   {
     cout << "\ndeQueued : " << queue[qFront] << endl;
     qFront++;
@@ -39,7 +39,7 @@ void deQueue()
 
 void queueDisplay()
 {
-  cout << "\nfront , rear : " << qFront << " " << qRear;
+  // cout << "\nfront , rear : " << qFront << " " << qRear; // for Debugging
   if (qFront >= 0 && qRear >= qFront)
   {
     cout << "\ndisplaying queue\n";
@@ -63,7 +63,7 @@ int main()
   {
     cout << "1.Queue Insertion\n2.Queue Deletion\n3.Display\n4.Exit\n";
     cin >> userOption;
-    cout << "userOption : " << userOption;
+    // cout << "userOption : " << userOption;
     if (userOption == 1)
     {
       enQueue();
