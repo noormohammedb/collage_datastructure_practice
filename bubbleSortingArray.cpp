@@ -14,7 +14,7 @@ int main()
   for (i = 0; i < arrLeng; i++)
     cin >> myArray[i];
 
-  cout << "\nEnter Array are : ";
+  cout << "\nEntered Array Are : ";
 
   for (i = 0; i < arrLeng; i++)
     cout << myArray[i] << " ";
